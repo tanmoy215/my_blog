@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" href="../images/favicon.ico">
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #e8f5e9, #f4f4f4);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 100;
+        }
+            main{
+                padding-top: 7rem;
+            }
+        h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .about-me {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        .about-me h2 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 8px;
+        }
+
+        .about-me p {
+            line-height: 1.8;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .about-me img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .about-me img:hover {
+            transform: scale(1.1);
+        }
+
+        .skills {
+            margin-top: 30px;
+        }
+
+        .skills h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .skills ul li:before {
+            content: "✔";
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        /* Map Section */
+        .map {
+            margin-top: 40px;
+        }
+
+        .map iframe {
+            width: 100%;
+            height: 350px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover and Animation Effects */
+        .about-me:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8em;
+            }
+
+            .about-me h2 {
+                font-size: 1.5em;
+            }
+
+            .about-me p {
+                font-size: 1.1em;
+            }
+
+            .skills ul li {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .about-me p, .skills ul li {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+    
+    <main>
+        <section class="about-me">
+            <img src="../images/tom.jpg" alt="My Image">
+            <h2>Hello, I'm Tanmoy Majee</h2>
+            <p>I'm a passionate Computer Science student at Brainware University with a keen interest in technology and cybersecurity. I'm also a MERN stack developer and enjoy building full-stack applications. I love solving algorithmic challenges and am always eager to learn new skills to stay ahead in this ever-evolving field.</p>
+            
+            <h2>My Journey</h2>
+            <p>My journey into the world of technology began at an early age, and since then, I have been pursuing my passion for coding and problem-solving. From participating in coding challenges to building real-world applications, I aim to enhance my skills and contribute to the tech community. I am constantly seeking opportunities to grow and learn from experienced professionals and mentors.</p>
+            
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>JavaScript (ES6+)</li>
+                    <li>MERN Stack (MongoDB, Express.js, React, Node.js)</li>
+                    <li>Cybersecurity Fundamentals</li>
+                    <li>HTML, CSS, and JavaScript for Web Development</li>
+                    <li>Problem Solving (LeetCode, Codeforces)</li>
+                    <li>Version Control with Git and GitHub</li>
+                </ul>
+            </div>
+    
+            <div class="map">
+                <h3>Location</h3>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1736.8958927886043!2d88.5145335!3d22.7266531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8a24b9600d1ed%3A0xeae19e2c3e502347!2sKazipara%2C%20Bamangachi%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1673859038508!5m2!1sen!2sin" 
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+            
+            </div>
+        </section>
+    </main>
+</body>
+</html>

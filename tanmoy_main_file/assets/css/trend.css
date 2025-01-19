@@ -1,0 +1,207 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+#two{
+    margin-bottom: 3rem;
+}
+
+/* Top Headlines Section */
+.topHeadlines {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Left Section */
+.topHeadlines .left {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.topHeadlines .left .title h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.topHeadlines .left .img {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.topHeadlines .left .text .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.topHeadlines .left .text .description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Right Section */
+.topHeadlines .right {
+    flex: 3;
+}
+
+.topHeadlines .right .title h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Top News Section */
+.topNews {
+    height: 400px; /* Fixed height for scrolling */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.top {
+    display: flex;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.top:hover {
+    background-color: #f0f8ff; /* Light blue background color on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+.top:hover p {
+    color: #0056b3; /* Change text color to blue on hover */
+}
+
+
+
+.top_img {
+    flex: 1;
+    height: 80px;
+    width: 80px;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.top p {
+    flex: 3;
+    font-size: 0.9rem;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Show only 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+#breakingImg {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .topHeadlines {
+        flex-direction: column; /* Stacks left and right sections */
+    }
+
+    .topHeadlines .left {
+        order: 2; /* Place the left section below the right section */
+        width: 100%;
+    }
+
+    .topHeadlines .right {
+        order: 1; /* Place the right section above the left section */
+        width: 100%;
+    }
+
+    .topNews {
+        display: flex;
+        flex-direction: column; /* Ensure headlines stack in the same order */
+        gap: 15px;
+    }
+
+    .top {
+        flex-direction: row; /* Keep the layout same as large screen */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .top_img {
+        width: 80px; /* Keep the image size the same */
+        height: 80px;
+    }
+
+    .top p {
+        font-size: 0.9rem; /* Maintain the text size */
+        -webkit-line-clamp: 3; /* Clipped text as on larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .topHeadlines {
+        padding: 10px;
+    }
+
+    .topHeadlines .left {
+        order: 2; /* Keep the left section below */
+    }
+
+    .topHeadlines .right {
+        order: 1; /* Keep the right section above */
+    }
+
+    .top {
+        flex-direction: row; /* Maintain the row layout */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .top_img {
+        width: 60px; /* Slightly smaller image for very small screens */
+        height: 60px;
+    }
+
+    .top p {
+        font-size: 0.8rem; /* Adjust text size slightly */
+        -webkit-line-clamp: 3; /* Keep text clipping consistent */
+    }
+}
