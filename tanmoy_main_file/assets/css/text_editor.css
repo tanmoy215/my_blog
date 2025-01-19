@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: #338cf4;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/back_text.jpg');
+    background-size: cover;
+  }
+  .container {
+    background-color: #ffffff;
+    width: 90vmin;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+  }
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+  button {
+    height: 28px;
+    width: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 3px;
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    color: #020929;
+  }
+  select {
+    padding: 7px;
+    border: 1px solid #020929;
+    border-radius: 3px;
+  }
+  .options label,
+  .options select {
+    font-family: "Poppins", sans-serif;
+  }
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  input[type="color"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    width: 40px;
+    height: 28px;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+  }
+  input[type="color"]::-moz-color-swatch {
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
+  }
+  /* style.css */
+  #text-input {
+    background-color: rgba(237, 242, 247, 0.5); /* Light background */
+    color: #2d3748; /* Main text color */
+    min-height: 300px; /* Ensure space for editing */
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    overflow: auto;
+  
+    /* Watermark style */
+    position: relative;
+    background-image: none;
+  }
+  
+  #text-input::before {
+    content: "Tanmoy"; /* Watermark text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: rgba(0, 0, 0, 0.1); /* Low opacity for watermark */
+    pointer-events: none; /* Ensure it's not interactive */
+    user-select: none; /* Prevent selection */
+    z-index: 1; /* Ensure it stays below text */
+  }
+  
+  #text-input:focus {
+    outline: none; /* Optional: Remove focus outline */
+  }
+  .active {
+    background-color: #e0e9ff;
+  }
