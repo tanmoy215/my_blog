@@ -1,20 +1,20 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    const topNews = document.querySelector(".topNews");
-    const scrollStep = 1; // Pixels to scroll per interval
-    const intervalTime = 10; // Time in milliseconds for each scroll step
+  const topNews = document.querySelector(".topNews");
+  const scrollStep = 5; // Increase pixels to scroll per interval (higher number means faster scroll)
+  const intervalTime = 5; // Decrease time in milliseconds for faster scrolling
 
-    const autoScroll = () => {
-        topNews.scrollTop += scrollStep;
+  const autoScroll = () => {
+      topNews.scrollTop += scrollStep;
 
-        // Check if the scroll reached the end
-        if (topNews.scrollTop + topNews.clientHeight >= topNews.scrollHeight) {
-            topNews.scrollTop = 0; // Reset to the top
-        }
-    };
+      // Check if the scroll reached the end
+      if (topNews.scrollTop + topNews.clientHeight >= topNews.scrollHeight) {
+          topNews.scrollTop = 0; // Reset to the top
+      }
+  };
 
-    // Start automatic scrolling
-    const scrollInterval = setInterval(autoScroll, intervalTime);
+  // Start automatic scrolling
+  const scrollInterval = setInterval(autoScroll, intervalTime);
 });
 
 
