@@ -197,7 +197,8 @@ body {
 .top p {
     flex: 3;
     font-size: 0.9rem;
-    color: #555;
+   
+    color: #B22222;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

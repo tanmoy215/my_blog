@@ -1,16 +1,48 @@
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const topNews = document.querySelector(".topNews");
+//   const scrollStep = 5; // Increase pixels to scroll per interval (higher number means faster scroll)
+//   const intervalTime = 5; // Decrease time in milliseconds for faster scrolling
+
+//   const autoScroll = () => {
+//       topNews.scrollTop += scrollStep;
+
+//       // Check if the scroll reached the end
+//       if (topNews.scrollTop + topNews.clientHeight >= topNews.scrollHeight) {
+//           topNews.scrollTop = 0; // Reset to the top
+//       }
+//   };
+
+//   // Start automatic scrolling
+//   const scrollInterval = setInterval(autoScroll, intervalTime);
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   const topNews = document.querySelector(".topNews");
-  const scrollStep = 5; // Increase pixels to scroll per interval (higher number means faster scroll)
-  const intervalTime = 5; // Decrease time in milliseconds for faster scrolling
+  const topBox = document.querySelector(".topBox");
+  
+  // Increase the scroll step and reduce the interval time to make it faster
+  const scrollStep = 3;  // Number of pixels to scroll per interval (higher value means faster scroll)
+  const intervalTime = 5; // Time between each scroll step (lower value means faster scroll)
+
+  let isScrollingDown = true; // Initial scroll direction (down)
 
   const autoScroll = () => {
+    if (isScrollingDown) {
       topNews.scrollTop += scrollStep;
 
-      // Check if the scroll reached the end
+      // If the content reaches the bottom, reverse the scrolling direction
       if (topNews.scrollTop + topNews.clientHeight >= topNews.scrollHeight) {
-          topNews.scrollTop = 0; // Reset to the top
+        isScrollingDown = false;
       }
+    } else {
+      topNews.scrollTop -= scrollStep;
+
+      // If the content reaches the top, reverse the scrolling direction
+      if (topNews.scrollTop <= 0) {
+        isScrollingDown = true;
+      }
+    }
   };
 
   // Start automatic scrolling
@@ -18,6 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+       //data link in TopNews section
+document.addEventListener("DOMContentLoaded", () => {
+  // Get all elements with class 'top'
+  const topElements = document.querySelectorAll(".top");
+
+  topElements.forEach(top => {
+    // Add click event listener to each .top element
+    top.addEventListener("click", () => {
+      // Get the value of the 'data-link' attribute
+      const link = top.getAttribute("data-link");
+      
+      // Redirect the user to the link in a new tab
+      window.open(link, '_blank');
+    });
+  });
+});
 
   
   let nums = ['./assets/images/trend1.jpg','./assets/images/trend2.webp','./assets/images/trend3.avif',"./assets/images/trend4.webp","./assets/images/trend5.jpeg","./assets/images/trend6.avif","./assets/images/trend7.jpg","./assets/images/trend8.jpg","./assets/images/trend9.jpg","./assets/images/trend10.webp","./assets/images/trend11.jpg","./assets/images/trend12.webp","./assets/images/trend13.webp","./assets/images/trend14.webp","./assets/images/trend15.jpg","./assets/images/trend16.png","./assets/images/trend17.webp","./assets/images/trend18.webp","./assets/images/trend19.jpeg","./assets/images/trend20.webp"];
