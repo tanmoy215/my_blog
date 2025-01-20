@@ -1,22 +1,4 @@
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const topNews = document.querySelector(".topNews");
-//   const scrollStep = 5; // Increase pixels to scroll per interval (higher number means faster scroll)
-//   const intervalTime = 5; // Decrease time in milliseconds for faster scrolling
-
-//   const autoScroll = () => {
-//       topNews.scrollTop += scrollStep;
-
-//       // Check if the scroll reached the end
-//       if (topNews.scrollTop + topNews.clientHeight >= topNews.scrollHeight) {
-//           topNews.scrollTop = 0; // Reset to the top
-//       }
-//   };
-
-//   // Start automatic scrolling
-//   const scrollInterval = setInterval(autoScroll, intervalTime);
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const topNews = document.querySelector(".topNews");
   const topBox = document.querySelector(".topBox");
@@ -50,8 +32,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-       //data link in TopNews section
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Get all elements with class 'top'
+//   const topElements = document.querySelectorAll(".top");
+
+//   topElements.forEach(top => {
+//     // Add click event listener to each .top element
+//     top.addEventListener("click", () => {
+//       // Get the value of the 'data-link' attribute
+//       const link = top.getAttribute("data-link");
+      
+//       // Redirect the user to the link in a new tab
+//       if (link) {
+//         window.open(link, '_blank');
+//       } else {
+//         console.error("No data-link attribute found on this element.");
+//       }
+//     });
+//   });
+
+//   // Get all elements with class 'profile'
+//   const profiles = document.querySelectorAll('.profile');
+
+//   profiles.forEach(profile => {
+//     // Add click event listener to each .profile element
+//     profile.addEventListener('click', (event) => {
+//       // Prevent the event from propagating to parent elements
+//       event.stopPropagation();
+
+//       // Get the value of the 'data-link' attribute
+//       const link = profile.getAttribute("data-link");
+
+//       // Redirect the user to the link in a new tab
+//       if (link) {
+//         window.open(link, '_blank');
+//       } else {
+//         console.error("No data-link attribute found on this element.");
+//       }
+//     });
+//   });
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
+
   // Get all elements with class 'top'
   const topElements = document.querySelectorAll(".top");
 
@@ -62,10 +90,58 @@ document.addEventListener("DOMContentLoaded", () => {
       const link = top.getAttribute("data-link");
       
       // Redirect the user to the link in a new tab
-      window.open(link, '_blank');
+      if (link) {
+        window.open(link, '_blank');
+      } else {
+        console.error("No data-link attribute found on this element.");
+      }
     });
   });
+
+
+
+  // Get all elements with class 'post-box'
+  const postBoxes = document.querySelectorAll('.post-box');
+
+  postBoxes.forEach(postBox => {
+    // Add click event listener to each .post-box element
+    postBox.addEventListener('click', () => {
+      // Get the value of the 'data-link' attribute
+      const link = postBox.getAttribute("data-link");
+
+      // Redirect the user to the link in a new tab
+      if (link) {
+        window.open(link, '_blank');
+      } else {
+        console.error("No data-link attribute found on this post-box element.");
+      }
+    });
+
+
+
+    // Get the profile element inside the current post-box
+    const profile = postBox.querySelector('.profile');
+
+    if (profile) {
+      // Add click event listener to the profile element
+      profile.addEventListener('click', (event) => {
+        // Prevent the event from propagating to the parent .post-box
+        event.stopPropagation();
+
+        // Get the value of the 'data-link' attribute for the profile
+        const profileLink = profile.getAttribute("data-link");
+
+        // Redirect the user to the profile link in a new tab
+        if (profileLink) {
+          window.open(profileLink, '_blank');
+        } else {
+          console.error("No data-link attribute found on this profile element.");
+        }
+      });
+    }
+  });
 });
+
 
   
   let nums = ['./assets/images/trend1.jpg','./assets/images/trend2.webp','./assets/images/trend3.avif',"./assets/images/trend4.webp","./assets/images/trend5.jpeg","./assets/images/trend6.avif","./assets/images/trend7.jpg","./assets/images/trend8.jpg","./assets/images/trend9.jpg","./assets/images/trend10.webp","./assets/images/trend11.jpg","./assets/images/trend12.webp","./assets/images/trend13.webp","./assets/images/trend14.webp","./assets/images/trend15.jpg","./assets/images/trend16.png","./assets/images/trend17.webp","./assets/images/trend18.webp","./assets/images/trend19.jpeg","./assets/images/trend20.webp"];
