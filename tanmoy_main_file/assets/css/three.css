@@ -106,7 +106,6 @@
     box-shadow: 0 4px 14px hsl(35deg 25% 15% / 10%);
     padding: 15px;
     border-radius: 0.5rem;
-    cursor: pointer;
 }
 
 .post-img{
@@ -243,3 +242,8 @@
 
 
 /* post section */
+ 
+.post-box > a{
+    color: #DC143C;
+    text-decoration: underline;
+  }

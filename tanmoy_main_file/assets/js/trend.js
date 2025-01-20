@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const topNews = document.querySelector(".topNews");
     const scrollStep = 1; // Pixels to scroll per interval
-    const intervalTime = 20; // Time in milliseconds for each scroll step
+    const intervalTime = 10; // Time in milliseconds for each scroll step
 
     const autoScroll = () => {
         topNews.scrollTop += scrollStep;
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   
-  let nums = ['./assets/images/sports1.gif','./assets/images/health1.gif', './assets/images/sports2.gif','./assets/images/sports3.gif','./assets/images/health2.gif','./assets/images/health3.gif','./assets/images/sports2.gif','./assets/images/health4.gif'];
+  let nums = ['./assets/images/trend1.jpg','./assets/images/trend2.webp','./assets/images/trend3.avif',"./assets/images/trend4.webp","./assets/images/trend5.jpeg","./assets/images/trend6.avif","./assets/images/trend7.jpg","./assets/images/trend8.jpg","./assets/images/trend9.jpg","./assets/images/trend10.webp","./assets/images/trend11.jpg","./assets/images/trend12.webp","./assets/images/trend13.webp","./assets/images/trend14.webp","./assets/images/trend15.jpg","./assets/images/trend16.png","./assets/images/trend17.webp","./assets/images/trend18.webp","./assets/images/trend19.jpeg","./assets/images/trend20.webp"];
   const title = [
     "India's G20 Presidency: Pioneering Global Change",
     "IPL 2025 Auction Sees Record-Breaking Bids",

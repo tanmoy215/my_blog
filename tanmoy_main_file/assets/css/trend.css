@@ -36,12 +36,56 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.topHeadlines .left .title h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
+  .topHeadlines .left .title h2 {
     text-align: center;
+    font-size: 2rem; /* Slightly larger for better visibility */
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: transparent; /* Make text invisible */
+    background-image: linear-gradient(
+        to top,
+        #FF4500, /* Flame orange */
+        #FF6347, /* Tomato red */
+        #FFD700, /* Golden yellow */
+        #FF4500 /* Flame orange */
+    );
+    background-clip: text; /* Visible gradient on text only */
+    -webkit-background-clip: text;
+    animation: fire-glow 4s infinite ease-in-out, flicker 0.2s infinite alternate;
+    text-shadow: 
+        0 0 20px rgba(255, 69, 0, 0.8), /* Softer flame glow */
+        0 0 40px rgba(255, 99, 71, 0.7), 
+        0 0 60px rgba(255, 215, 0, 0.6), 
+        0 0 80px rgba(255, 69, 0, 0.5);
+    transition: transform 0.2s ease; /* Interactive scale effect */
 }
+
+.topHeadlines .left .title h2:hover {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+    text-shadow: 
+        0 0 30px rgba(255, 69, 0, 0.9), 
+        0 0 50px rgba(255, 99, 71, 0.8), 
+        0 0 70px rgba(255, 215, 0, 0.7), 
+        0 0 90px rgba(255, 69, 0, 0.6);
+}
+
+/* Gradient shimmer for moving fire */
+@keyframes fire-glow {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 50%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Flicker effect for dynamic flames */
+@keyframes flicker {
+    0%, 100% { text-shadow: 0 0 20px #FF4500, 0 0 40px #FF6347, 0 0 60px #FFD700, 0 0 80px #FF4500; }
+    50% { text-shadow: 0 0 25px #FFD700, 0 0 45px #FF4500, 0 0 65px #FF6347, 0 0 85px #FF4500; }
+    75% { text-shadow: 0 0 15px #FFD700, 0 0 35px #FF4500, 0 0 55px #FF6347, 0 0 75px #FF4500; }
+}
+
+
 
 .topHeadlines .left .img {
     width: 100%;
@@ -52,14 +96,15 @@ body {
 }
 
 .topHeadlines .left .text .title {
-    font-weight: bold;
     font-size: 1.2rem;
-    margin-bottom: 10px;
+  font-weight: bold;
+  color: #008080; /* Crimson red for modern emphasis */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for better readability */
 }
 
 .topHeadlines .left .text .description {
     font-size: 0.9rem;
-    color: #555;
+    color: #6A5ACD;
 }
 
 /* Right Section */
@@ -67,11 +112,44 @@ body {
     flex: 3;
 }
 
+
 .topHeadlines .right .title h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 15px;
+    font-size: 2rem; /* Slightly larger for better readability */
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: transparent; /* Invisible text base */
+    background-image: linear-gradient(
+        45deg,
+        #FF6F61, /* Sunset Orange */
+        #FFB85F, /* Sunlit Gold */
+        #FF6F61
+    );
+    background-clip: text;
+    -webkit-background-clip: text; /* Gradient only on text */
+    animation: headline-shimmer 6s infinite ease-in-out;
+    text-shadow: 
+        0 0 5px rgba(255, 111, 97, 0.5), 
+        0 0 10px rgba(255, 184, 95, 0.4),
+        0 0 20px rgba(255, 111, 97, 0.3);
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease-in-out;
 }
+
+.topHeadlines .right .title h2:hover {
+    transform: scale(1.1); /* Subtle zoom on hover */
+    text-shadow: 
+        0 0 10px rgba(255, 111, 97, 0.6), 
+        0 0 20px rgba(255, 184, 95, 0.5), 
+        0 0 30px rgba(255, 111, 97, 0.4);
+}
+
+/* Smooth gradient shimmer animation */
+@keyframes headline-shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 
 /* Top News Section */
 .topNews {
