@@ -1,115 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rich Text Editor</title>
-    <!-- FontAwesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="../css/text_editor.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="options">
-        <!-- Text Format -->
-        <button id="bold" class="option-button format">
-          <i class="fa-solid fa-bold"></i>
-        </button>
-        <button id="italic" class="option-button format">
-          <i class="fa-solid fa-italic"></i>
-        </button>
-        <button id="underline" class="option-button format">
-          <i class="fa-solid fa-underline"></i>
-        </button>
-        <button id="strikethrough" class="option-button format">
-          <i class="fa-solid fa-strikethrough"></i>
-        </button>
-        <button id="superscript" class="option-button script">
-          <i class="fa-solid fa-superscript"></i>
-        </button>
-        <button id="subscript" class="option-button script">
-          <i class="fa-solid fa-subscript"></i>
-        </button>
 
-        <!-- List -->
-        <button id="insertOrderedList" class="option-button">
-          <div class="fa-solid fa-list-ol"></div>
-        </button>
-        <button id="insertUnorderedList" class="option-button">
-          <i class="fa-solid fa-list"></i>
-        </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/text_editor.css">
+    <link rel="icon" href="./assets/images/favicon.ico">
+</head>
 
-        <!-- Undo/Redo -->
-        <button id="undo" class="option-button">
-          <i class="fa-solid fa-rotate-left"></i>
-        </button>
-        <button id="redo" class="option-button">
-          <i class="fa-solid fa-rotate-right"></i>
-        </button>
+<body>
 
-        <!-- Link -->
-        <button id="createLink" class="adv-option-button">
-          <i class="fa fa-link"></i>
-        </button>
-        <button id="unlink" class="option-button">
-          <i class="fa fa-unlink"></i>
-        </button>
+    <div class="form-container">
+        <h1>Create Your Post</h1>
+        <form id="post-form">
+            <!-- Title -->
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter post title" required>
+            </div>
 
-        <!-- Alignment -->
-        <button id="justifyLeft" class="option-button align">
-          <i class="fa-solid fa-align-left"></i>
-        </button>
-        <button id="justifyCenter" class="option-button align">
-          <i class="fa-solid fa-align-center"></i>
-        </button>
-        <button id="justifyRight" class="option-button align">
-          <i class="fa-solid fa-align-right"></i>
-        </button>
-        <button id="justifyFull" class="option-button align">
-          <i class="fa-solid fa-align-justify"></i>
-        </button>
-        <button id="indent" class="option-button spacing">
-          <i class="fa-solid fa-indent"></i>
-        </button>
-        <button id="outdent" class="option-button spacing">
-          <i class="fa-solid fa-outdent"></i>
-        </button>
+           
+            <!-- Description -->
+<div class="form-group">
+    <label for="description">Description</label>
+    <div id="description" contenteditable="false" class="description-box"></div>
+    <button type="button" id="edit-description" class="btn-edit">Edit Description</button>
+</div>
 
-        <!-- Headings -->
-        <select id="formatBlock" class="adv-option-button">
-          <option value="H1">H1</option>
-          <option value="H2">H2</option>
-          <option value="H3">H3</option>
-          <option value="H4">H4</option>
-          <option value="H5">H5</option>
-          <option value="H6">H6</option>
-        </select>
+            
 
-        <!-- Font -->
-        <select id="fontName" class="adv-option-button"></select>
-        <select id="fontSize" class="adv-option-button"></select>
 
-        <!-- Color -->
-        <div class="input-wrapper">
-          <input type="color" id="foreColor" class="adv-option-button" />
-          <label for="foreColor">Font Color</label>
-        </div>
-        <div class="input-wrapper">
-          <input type="color" id="backColor" class="adv-option-button" />
-          <label for="backColor">Highlight Color</label>
-        </div>
-      </div>
-      <div id="text-input" contenteditable="true"></div>
+            <!-- Dropdown for tags -->
+            <div class="form-group">
+                <label for="tag">Tag</label>
+                <select id="tag" name="tag" required>
+                    <option value="" disabled selected>Choose a tag</option>
+                    <option value="tech">Tech</option>
+                    <option value="health">Health</option>
+                    <option value="sports">Sports</option>
+                    <option value="culture">Culture</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="science">Science</option>
+                    <option value="food">Food</option>
+                    <option value="education">Education</option>
+                    <option value="finance">Finance</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="lifestyle">Lifestyle</option>
+                    <option value="news">News</option>
+                    <option value="nature">Nature</option>
+                    <option value="music">Music</option>
+                    <option value="movies">Movies</option>
+                    <option value="travel">Travel</option>
+                    <option value="politics">Politics</option>
+                    
+                </select>
+            </div>
+
+            <!-- Supported link -->
+            <div class="form-group">
+                <label for="sup">Supported Link</label>
+                <input type="url" id="sup" name="link" placeholder="https://your-repo-link.com" required>
+            </div>
+
+            <!-- Image upload -->
+            <div class="form-group">
+                <label for="image">Upload Image</label>
+                <input type="file" id="image" name="image" accept="image/*" required>
+                <div id="image-preview">
+                    <p>No image selected</p>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn-submit">Create Post</button>
+        </form>
     </div>
-    <!--Script-->
+
+
+    <!-- editor -->
+
+
+    <div id="editor-modal" class="modal">
+        <div class="modal-content">
+            <div class="editor-toolbar">
+                <button id="editor-bold" class="toolbar-btn"><b>B</b></button>
+                <button id="editor-italic" class="toolbar-btn"><i>I</i></button>
+                <button id="editor-underline" class="toolbar-btn"><u>U</u></button>
+                <button id="editor-bullet" class="toolbar-btn">•</button>
+                <select id="editor-heading" class="toolbar-select">
+                    <option value="P" selected>Normal</option>
+                    <option value="H1">Heading 1</option>
+                    <option value="H2">Heading 2</option>
+                    <option value="H3">Heading 3</option>
+                </select>
+            </div>
+            <div id="editor-textarea" contenteditable="true"></div>
+            <div class="modal-buttons">
+                <button id="save-edit" class="btn-modal">Save</button>
+                <button id="cancel-edit" class="btn-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- <div id="alert-box" style="display:none;">
+        <span class="checkmark">✔</span>
+
+    </div> -->
+
+    <div id="overlay"></div>  <!-- The overlay -->
+<div id="alert-box" style="display:none;">
+    <span class="checkmark">✔</span>
+</div>
+
+    
+    
+
     <script src="../js/text_editor.js"></script>
-  </body>
+</body>
+
 </html>

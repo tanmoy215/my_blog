@@ -1,110 +1,376 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #444;
+  font-size: 15px;
+}
+
+input, select, textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #42a5f5;
+  box-shadow: 0 0 10px rgba(66, 165, 245, 0.4);
+  outline: none;
+}
+
+#image-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+#image-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.btn-submit {
+  background: linear-gradient(135deg, #2196f3, #64b5f6);
+  color: white;
+  padding: 14px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #64b5f6, #2196f3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(33, 150, 243, 0.4);
+}
+
+.btn-edit {
+  align-self: flex-start;
+  background: transparent;
+  color: #42a5f5;
+  border: 1px solid #42a5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+  background: #42a5f5;
+  color: #fff;
+}
+
+.btn-edit:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  form {
+    flex-direction: column;
   }
-  body {
-    background-color: #338cf4;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('../images/back_text.jpg');
-    background-size: cover;
+
+  .form-group {
+    flex: 1 1 100%;
   }
-  .container {
-    background-color: #ffffff;
-    width: 90vmin;
-    padding: 50px 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    border-radius: 10px;
-    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+
+  h1 {
+    font-size: 1.8rem;
   }
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 15px;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
   }
-  button {
-    height: 28px;
-    width: 28px;
-    display: grid;
-    place-items: center;
-    border-radius: 3px;
-    border: none;
-    background-color: #ffffff;
-    outline: none;
-    color: #020929;
+
+  h1 {
+    font-size: 1.5rem;
   }
-  select {
-    padding: 7px;
-    border: 1px solid #020929;
-    border-radius: 3px;
-  }
-  .options label,
-  .options select {
-    font-family: "Poppins", sans-serif;
-  }
-  .input-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  input[type="color"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    width: 40px;
-    height: 28px;
-    border: none;
-    cursor: pointer;
-  }
-  input[type="color"]::-webkit-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-  }
-  input[type="color"]::-moz-color-swatch {
-    border-radius: 15px;
-    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #020929;
-  }
-  /* style.css */
-  #text-input {
-    background-color: rgba(237, 242, 247, 0.5); /* Light background */
-    color: #2d3748; /* Main text color */
-    min-height: 300px; /* Ensure space for editing */
+
+  input, select, textarea {
     padding: 10px;
-    margin-top: 10px;
-    font-size: 16px;
-    line-height: 1.5;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    overflow: auto;
-  
-    /* Watermark style */
-    position: relative;
-    background-image: none;
+    font-size: 13px;
   }
-  
-  #text-input::before {
-    content: "Tanmoy"; /* Watermark text */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    color: rgba(0, 0, 0, 0.1); /* Low opacity for watermark */
-    pointer-events: none; /* Ensure it's not interactive */
-    user-select: none; /* Prevent selection */
-    z-index: 1; /* Ensure it stays below text */
+
+  .btn-submit {
+    font-size: 14px;
   }
-  
-  #text-input:focus {
-    outline: none; /* Optional: Remove focus outline */
-  }
-  .active {
-    background-color: #e0e9ff;
-  }
+}
+
+
+
+
+
+
+
+
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none; /* Hidden by default */
+  z-index: 9999; /* Higher than form-container */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+#editor-textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.btn-modal {
+  padding: 10px 15px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#save-edit {
+  background: #42a5f5;
+}
+
+#save-edit:hover {
+  background: #1e88e5;
+}
+
+#cancel-edit {
+  background: #e53935;
+}
+
+#cancel-edit:hover {
+  background: #d32f2f;
+}
+
+
+/* Editor Toolbar */
+.editor-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.toolbar-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.toolbar-select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#editor-textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-y: auto;
+  resize: none;
+  background: #ffffff;
+}
+
+
+
+
+/* Ensure the description box is flexible and within the form */
+#description {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9f9f9;
+  min-height: 40px; /* Initial height */
+  max-height: 300px; /* Set a max height to prevent overflow */
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
+  white-space: pre-wrap; /* Ensure wrapping of text */
+  word-wrap: break-word;
+  line-height: 1.5;
+  transition: border-color 0.3s ease, background-color 0.3s ease, min-height 0.3s ease;
+  width: 100%; /* Make it responsive */
+  max-width: 100%; /* Prevent the box from exceeding parent container's width */
+  box-sizing: border-box; /* Ensure padding is included in width/height calculations */
+}
+
+#description[contenteditable="true"] {
+  background-color: #ffffff; 
+  border: 1px solid #42a5f5; 
+  min-height: 80px; /* Slightly increased height when editing */
+  max-height: none; /* Remove max height during editing */
+}
+
+/* Optional: Add a hover effect when editing */
+#description:hover {
+  border-color: #42a5f5;
+}
+
+
+
+
+
+
+
+#alert-box {
+  display: none;
+  background-color: green; /* Green for success */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  position: fixed; /* Fixed positioning to center it on the screen */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to fully center */
+  width: 80%; /* Set a width for the box */
+  max-width: 500px; /* Limit max width */
+  text-align: center; /* Center the text inside the box */
+  font-size: 20px; /* Increase font size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+  z-index: 99999; /* Ensure it's above other elements */
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Fade in/out effect */
+}
+
+#alert-box .checkmark {
+  font-size: 50px; /* Make the checkmark large */
+  color: white; /* Make the checkmark white */
+  margin-right: 15px; /* Space between checkmark and text */
+}
+
+#alert-box strong {
+  font-weight: bold;
+  font-size: 24px; /* Increase the size of the "Thank You" message */
+}
+
+#overlay {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed to cover the entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  z-index: 9998; /* Just below the alert box */
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
