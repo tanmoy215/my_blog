@@ -24,22 +24,32 @@ const updateHeaderBg = function () {
   }
 };
 
-for (let i = 0; i < themeBtn.length; i++) {
-  themeBtn[i].addEventListener('click', function () {
-    // Toggle `light-theme` & `dark-theme` class from `body` when clicked `theme-btn`
-    document.body.classList.toggle('light-theme');
-    document.body.classList.toggle('dark-theme');
 
-    for (let j = 0; j < themeBtn.length; j++) {
-      // Toggle classes between `light` & `dark` for all `theme-btn`
-      themeBtn[j].classList.toggle('light');
-      themeBtn[j].classList.toggle('dark');
-    }
+// for (let i = 0; i < themeBtn.length; i++) {
+//   themeBtn[i].addEventListener('click', function () {
+//     // Toggle `light-theme` & `dark-theme` class from `body` when clicked `theme-btn`
+//     document.body.classList.toggle('light-theme');
+//     document.body.classList.toggle('dark-theme');
 
-    // Update header background color
-    updateHeaderBg();
-  });
-}
+//     for (let j = 0; j < themeBtn.length; j++) {
+//       // Toggle classes between `light` & `dark` for all `theme-btn`
+//       themeBtn[j].classList.toggle('light');
+//       themeBtn[j].classList.toggle('dark');
+//     }
+
+//     // Update header background color
+//     updateHeaderBg();
+//   });
+// }
+
+
+
+
+
+
+
+
+
 
 // Wait for the window to fully load
 window.onload = function () {
