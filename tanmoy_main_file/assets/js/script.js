@@ -58,7 +58,7 @@ window.onload = function () {
       loader.style.display = "none"; // Completely hide loader
       loginPage.style.display = "grid"; // Show login page
     }, 700); // Wait for fade-out transition
-  }, 4000); // 4 seconds loader display
+  }, 2900); // 4 seconds loader display
 };
 
 
