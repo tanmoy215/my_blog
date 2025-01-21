@@ -1,5 +1,5 @@
 
-'use strict';
+// 'use strict';
 
 // Navbar variables
 const nav = document.querySelector('.mobile-nav');
