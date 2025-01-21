@@ -1,4 +1,123 @@
 
+
+
+
+
+
+//top news section
+
+
+const topNewsData = [
+  {
+      link: "https://www.thehindu.com/news/cities/Mangalore/centre-for-indian-cuisine-and-food-culture-inaugurated/article67376062.ece",
+      image: "./assets/images/center_for.jpg",
+      description: "Chef Vikas Khanna inaugurates a center dedicated to exploring the rich historical background and science behind Indian cuisine, aiming to place it firmly on the global culinary map."
+  },
+  {
+      link: "https://time.com/4856954/can-money-buy-you-happiness/",
+      image: "./assets/images/Money-Can-Buy.jpg",
+      description: "New research challenges the age-old saying that money can't buy happiness. Economists and psychologists have found a strong correlation between wealth and well-being, suggesting that higher incomes contribute to both daily contentment and overall life satisfaction."
+  },
+  {
+      link: "https://www.npr.org/2024/10/30/g-s1-30873/china-launches-new-crew-to-its-space-station-as-it-seeks-to-expand-exploration",
+      image: "./assets/images/china_explore.jpg",
+      description: "China successfully launched a three-person crew to its Tiangong space station, signaling further advancements in its space exploration program. The crew aims to conduct spacewalks and install new station equipment."
+  },
+  {
+    link: "https://olympics.com/en/news/simone-biles-all-titles-records-medals-complete-list",
+    image: "./assets/images/simone.avif",
+    description: "American gymnast Simone Biles set a new record by winning her 28th World Championship title, surpassing the previous record of 27 titles held by Russian gymnast Svetlana Khorkina."
+  },
+  {
+    link: "https://www.bbc.com/news/world-australia-65606208",
+    image: "./assets/images/aus.jpeg",
+    description: "Australia announces a new climate policy aimed at reducing carbon emissions by 40% by 2030. The move is expected to reshape the country's energy sector and strengthen global climate action."
+  },
+  {
+    link: "https://www.thesun.co.uk/money/32878898/lindt-lindor-easter-egg-pistachio-tesco/",
+    image: "./assets/images/food.webp",
+    description: "Tesco stores across the UK are seeing a surge in customers eager to try Lindt's new Easter egg flavours: Lindor Milk Chocolate Egg with Pistachio Truffles, Lindor Tiramisu Egg, and an Extra Large Salted Caramel Egg. These additions have sparked mixed reactions among shoppers."
+  },
+  {
+    link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9388078/",
+    image: "./assets/images/covid.png",
+    description: "A study published in the *ANZ Journal of Surgery* indicates that disruptions caused by the COVID-19 pandemic have led to an increase in advanced breast cancer diagnoses, highlighting the importance of timely screening."
+  },
+  {
+    link: "https://www.cbsnews.com/news/nasa-parker-solar-probe-closest-ever-approach-sun/#:~:text=A%20NASA%20spacecraft%20made%20history,miles%20of%20the%20sun's%20surface.",
+    image: "./assets/images/china_sun.jpg",
+    description: "The NASA Parker Solar Probe completed its closest-ever approach to the sun on Christmas Eve, flying just 3.8 million miles above the sun's surface at a speed of 430,000 miles per hour. The spacecraft successfully survived the encounter, providing valuable data to understand solar phenomena."
+  },
+  {
+    link: "https://www.euronews.com/my-europe/2024/10/10/eu-delays-again-its-new-entryexit-system-for-short-stay-travellers2",
+    image: "./assets/images/euro.jpg",
+    description: "The European Entry/Exit System, initially set for November 2024, has been postponed. Airlines warn of potential delays and congestion at airports once implemented."
+  },
+  {
+    link: "https://www.vogue.com/article/troye-sivan-prada-milan-fashion-week-librarian-chic",
+    image: "./assets/images/fas.webp",
+    description: "Troye Sivan attended Prada's fall 2025 menswear show in Milan, sporting a 'librarian-chic' ensemble featuring steel-rimmed glasses, a gray cardigan, and a chocolate brown leather peacoat, signaling a new fashion era for the artist."
+  },
+  {
+    link: "https://www.lbc.co.uk/news/nearly-a-third-of-pupils-receiving-extra-exam-time/",
+    image: "./assets/images/exam.jpg",
+    description: "Nearly 420,000 pupils in England are provided with extra time for their GCSE and A-level exams, quadruple the number from ten years ago, according to Ofqual."
+  },
+  {
+    link: "https://mpora.com/multi-sport/adventure-holidays-best-kind-family-fun-can/",
+    image: "./assets/images/tra.jpg",
+    description: "Research indicates a rise in family adventure holidays, with destinations like Kenya and Thailand gaining popularity. Families seek educational and unique experiences during vacations."
+  },
+  {
+    link: "https://apnews.com/article/italy-fashion-upcycled-simon-cracker-fa39e78120aee6318e819b0aa8397c51",
+    image: "./assets/images/fast.jpeg",
+    description: "Italian brand Simon Cracker showcased an upcycled collection at Milan Fashion Week, parodying luxury items like Hermes' Birkin bag to critique the industry's disconnect from quality and creativity."
+  },
+  {
+    link: "https://olympics.com/en/paris-2024/the-games/olympic-paralympic-games/olympic-games",
+    image: "./assets/images/oly.jpg",
+    description: "The 2024 Paris Summer Olympics are set to showcase a wide array of exciting sports, including the return of surfing, skateboarding, and breakdancing. Paris promises to deliver a unique and thrilling experience for fans worldwide."
+  },
+  
+];
+
+// Function to create the "top-box" for each item in the top news array
+function createTopNewsBox(newsData) {
+  // Select the container where the top news boxes will be appended
+  const topNewsContainer = document.querySelector('.topNews');
+
+  // Loop through each item in the topNewsData array
+  newsData.forEach(data => {
+      // Create the top div element
+      const topBox = document.createElement('div');
+      topBox.classList.add('top');
+      topBox.setAttribute('data-link', data.link);
+
+      // Create the top_img div and set the background image
+      const topImg = document.createElement('div');
+      topImg.classList.add('top_img');
+      topImg.style.backgroundImage = `url(${data.image})`;
+
+      // Create the description paragraph
+      const description = document.createElement('p');
+      description.textContent = data.description;
+
+      // Append the image and description to the top box
+      topBox.appendChild(topImg);
+      topBox.appendChild(description);
+
+      // Append the top box to the container
+      topNewsContainer.appendChild(topBox);
+  });
+}
+
+// Call the function to create and append the top news boxes
+createTopNewsBox(topNewsData);
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const topNews = document.querySelector(".topNews");
   const topBox = document.querySelector(".topBox");
@@ -36,46 +155,448 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Get all elements with class 'top'
-//   const topElements = document.querySelectorAll(".top");
 
-//   topElements.forEach(top => {
-//     // Add click event listener to each .top element
-//     top.addEventListener("click", () => {
-//       // Get the value of the 'data-link' attribute
-//       const link = top.getAttribute("data-link");
-      
-//       // Redirect the user to the link in a new tab
-//       if (link) {
-//         window.open(link, '_blank');
-//       } else {
-//         console.error("No data-link attribute found on this element.");
-//       }
-//     });
-//   });
 
-//   // Get all elements with class 'profile'
-//   const profiles = document.querySelectorAll('.profile');
 
-//   profiles.forEach(profile => {
-//     // Add click event listener to each .profile element
-//     profile.addEventListener('click', (event) => {
-//       // Prevent the event from propagating to parent elements
-//       event.stopPropagation();
 
-//       // Get the value of the 'data-link' attribute
-//       const link = profile.getAttribute("data-link");
+//thired section 
 
-//       // Redirect the user to the link in a new tab
-//       if (link) {
-//         window.open(link, '_blank');
-//       } else {
-//         console.error("No data-link attribute found on this element.");
-//       }
-//     });
-//   });
-// });
+//post-box
+
+
+
+// Array of post objects
+const posts = [
+  {
+      category: "food",
+      title: "Centre for Indian Cuisine and Food Culture Inaugurated",
+      date: "15 Jan 2025",
+      description: "Chef Vikas Khanna inaugurates a center dedicated to exploring the rich historical background and science behind Indian cuisine, aiming to place it firmly on the global culinary map.",
+      image: "./assets/images/center_for.jpg",
+      link: "https://www.thehindu.com/news/cities/Mangalore/centre-for-indian-cuisine-and-food-culture-inaugurated/article67376062.ece",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "health",
+      title: "Money can buy happiness! Here's the science",
+      date: "16 Jan 2025",
+      description: "New research challenges the age-old saying that money can't buy happiness. Economists and psychologists have found a strong correlation between wealth and well-being, suggesting that higher incomes contribute to both daily contentment and overall life satisfaction.",
+      image: "./assets/images/Money-Can-Buy.jpg",
+      link: "https://time.com/4856954/can-money-buy-you-happiness/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "news",
+      title: "China launches new crew to its space station as it seeks to expand exploration",
+      date: "17 Jan 2025",
+      description: "China successfully launched a three-person crew to its Tiangong space station, signaling further advancements in its space exploration program. The crew aims to conduct spacewalks and install new station equipment.",
+      image: "./assets/images/china_explore.jpg",
+      link: "https://www.npr.org/2024/10/30/g-s1-30873/china-launches-new-crew-to-its-space-station-as-it-seeks-to-expand-exploration",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "sports",
+      title: "Simone Biles Breaks Record for Most World Championship Titles",
+      date: "18 Jan 2025",
+      description: "American gymnast Simone Biles set a new record by winning her 28th World Championship title, surpassing the previous record of 27 titles held by Russian gymnast Svetlana Khorkina.",
+      image: "./assets/images/simone.avif",
+      link: "https://olympics.com/en/news/simone-biles-all-titles-records-medals-complete-list",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "news",
+      title: "Australia to Implement Groundbreaking Climate Policy",
+      date: "19 Jan 2025",
+      description: "Australia announces a new climate policy aimed at reducing carbon emissions by 40% by 2030. The move is expected to reshape the country's energy sector and strengthen global climate action.",
+      image: "./assets/images/aus.jpeg",
+      link: "https://www.bbc.com/news/world-australia-65606208",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "fashion",
+      title: "Prada's Instinctive Menswear Shines at Milan Fashion Week",
+      date: "19 Jan 2025",
+      description: "Miuccia Prada and Raf Simons unveil a raw and cinematic menswear collection, blending primitive and domestic elements, advocating for instinctive dressing as a form of resistance to challenging times.",
+      image: "./assets/images/Italy_Fashion.avif",
+      link: "https://apnews.com/article/milan-fashion-week-prada-miuccia-raf-simons-709d6cc22235940f525cc0692fbb5bac#:~:text=Men%20were%20invited%20to%20wear,tops%20or%20slightly%20ratty%20sweaters.",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "travel",
+      title: "Seat Squatters on Planes: The Latest Social Media Trend",
+      date: "19 Jan 2025",
+      description: "A new trend involves passengers occupying seats assigned to others in hopes of upgrades. Experts advise against this practice, emphasizing the importance of respecting assigned seating.",
+      image: "./assets/images/seat.webp",
+      link: "https://www.hindustantimes.com/lifestyle/travel/selfish-seat-squatters-travel-trend-stirs-up-flight-drama-redditors-share-their-most-awkward-encounters-101734329003782.html",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "food",
+      title: "Shoppers Rush to Tesco for New Lindt Easter Egg Flavours",
+      date: "19 Jan 2025",
+      description: "Tesco stores across the UK are seeing a surge in customers eager to try Lindt's new Easter egg flavours: Lindor Milk Chocolate Egg with Pistachio Truffles, Lindor Tiramisu Egg, and an Extra Large Salted Caramel Egg. These additions have sparked mixed reactions among shoppers.",
+      image: "./assets/images/food.webp",
+      link: "",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "health",
+      title: "New Research Links Rise in Advanced Breast Cancer to COVID-19",
+      date: "19 Jan 2025",
+      description: "A study published in the *ANZ Journal of Surgery* indicates that disruptions caused by the COVID-19 pandemic have led to an increase in advanced breast cancer diagnoses, highlighting the importance of timely screening.",
+      image: "./assets/images/covid.png",
+      link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9388078/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "education",
+      title: "China Unveils 2024-2035 Plan to Build 'Strong Education Nation'",
+      date: "19 Jan 2025",
+      description: "China has announced a comprehensive plan for 2024-2035 to strengthen its education system, focusing on expanding free education, optimizing school distribution, and increasing enrollment in high-quality undergraduate programs.",
+      image: "./assets/images/chine_edu.avif",
+      link: "https://www.reuters.com/world/asia-pacific/china-unveils-2024-2035-plan-build-strong-education-nation-2025-01-19/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "science",
+  title: "NASA Probe Completes Historic Closest-Ever Approach to Sun",
+  date: "19 Jan 2025",
+  description: "The NASA Parker Solar Probe completed its closest-ever approach to the sun on Christmas Eve, flying just 3.8 million miles above the sun's surface at a speed of 430,000 miles per hour. The spacecraft successfully survived the encounter, providing valuable data to understand solar phenomena.",
+  image: "./assets/images/china_sun.jpg",
+  link: "https://www.cbsnews.com/news/nasa-parker-solar-probe-closest-ever-approach-sun/#:~:text=A%20NASA%20spacecraft%20made%20history,miles%20of%20the%20sun's%20surface.",
+  profileImage: "./assets/images/tom.jpg",
+  profileName: "Tanmoy",
+  profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "lifestyle",
+      title: "Eight out of 10 Brits want to be 'more Italian' and adopt a 'slower, more relaxed pace of life', new research shows",
+      date: "19 Jan 2025",
+      description: "A recent study commissioned by Italian coffee company Lavazza shows that 80% of British people wish to adopt a more Italian lifestyle characterized by a slower and more relaxed pace of life. The research, which surveyed 2,000 adults, revealed that many Brits admire Italian culture, describing it as passionate, laid-back, and sophisticated.",
+      image: "./assets/images/slower.webp",
+      link: "https://www.thesun.co.uk/fabulous/31110047/brits-more-italian-slower-more-relaxed-lifestyle-research/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "finance",
+      title: "Trump's New Crypto Token Surges Ahead of Inauguration",
+      date: "19 Jan 2025",
+      description: "Former President Donald Trump's newly launched cryptocurrency token has experienced a significant surge in value as his inauguration approaches, attracting attention from investors and the media.",
+      image: "./assets/images/trump.avif",
+      link: "https://www.thehindu.com/sci-tech/technology/trump-promotes-new-meme-coin-before-taking-office-on-pro-crypto-agenda/article69118222.ece",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "travel",
+      title: "New European Border Checks Delayed Again Amid Airline Concerns",
+      date: "19 Jan 2025",
+      description: "The European Entry/Exit System, initially set for November 2024, has been postponed. Airlines warn of potential delays and congestion at airports once implemented.",
+      image: "./assets/images/euro.jpg",
+      link: "https://www.euronews.com/my-europe/2024/10/10/eu-delays-again-its-new-entryexit-system-for-short-stay-travellers2",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "fashion",
+      title: "Troye Sivan's Fashion Week Look? Librarian-Chic",
+      date: "19 Jan 2025",
+      description: "Troye Sivan attended Prada's fall 2025 menswear show in Milan, sporting a 'librarian-chic' ensemble featuring steel-rimmed glasses, a gray cardigan, and a chocolate brown leather peacoat, signaling a new fashion era for the artist.",
+      image: "./assets/images/fas.webp",
+      link: "https://www.vogue.com/article/troye-sivan-prada-milan-fashion-week-librarian-chic",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "sports",
+      title: "Govt should leverage sports industry for economic growth: Report",
+      date: "19 Jan 2025",
+      description: "The government should create a model to boost the sports industry for economic growth. Policies need to encourage investment in sports infrastructure, events, and related services.",
+      image: "./assets/images/spt.webp",
+      link: "https://brandequity.economictimes.indiatimes.com/news/research/govt-should-leverage-sports-industry-for-economic-growth-report/115930284#:~:text=%22The%20Indian%20government%20should%20focus,of%20Sports%20in%20India%20report.",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "education",
+      title: "A Third of Pupils Now Receive Extra Time in Exams",
+      date: "19 Jan 2025",
+      description: "Nearly 420,000 pupils in England are provided with extra time for their GCSE and A-level exams, quadruple the number from ten years ago, according to Ofqual.",
+      image: "./assets/images/exam.jpg",
+      link: "https://www.lbc.co.uk/news/nearly-a-third-of-pupils-receiving-extra-exam-time/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "travel",
+      title: "Families Opting for Adventure Holidays Despite Challenges",
+      date: "19 Jan 2025",
+      description: "Research indicates a rise in family adventure holidays, with destinations like Kenya and Thailand gaining popularity. Families seek educational and unique experiences during vacations.",
+      image: "./assets/images/tra.jpg",
+      link: "https://mpora.com/multi-sport/adventure-holidays-best-kind-family-fun-can/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  }, 
+      {
+      category: "fashion",
+      title: "Independent Brand Simon Cracker Denounces Luxury Fashion System with Upcycled Parodies",
+      date: "19 Jan 2025",
+      description: "Italian brand Simon Cracker showcased an upcycled collection at Milan Fashion Week, parodying luxury items like Hermes' Birkin bag to critique the industry's disconnect from quality and creativity.",
+      image: "./assets/images/fast.jpeg",
+      link: "https://apnews.com/article/italy-fashion-upcycled-simon-cracker-fa39e78120aee6318e819b0aa8397c51",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "sports",
+      title: "The 2024 Summer Olympics: What to Expect in Paris",
+      date: "19 Jan 2025",
+      description: "The 2024 Paris Summer Olympics are set to showcase a wide array of exciting sports, including the return of surfing, skateboarding, and breakdancing. Paris promises to deliver a unique and thrilling experience for fans worldwide.",
+      image: "./assets/images/oly.jpg",
+      link: "https://olympics.com/en/paris-2024/the-games/olympic-paralympic-games/olympic-games",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "nature",
+      title: "Butterflies Flee to Scotland in the Face of Climate Change",
+      date: "19 Jan 2025",
+      description: "Over the past 40 years, climate change has driven ten new butterfly species to Scotland, traditionally found in England and Wales. This shift highlights the impact of climate change on species distribution.",
+      image: "./assets/images/butt.jpg",
+      link: "https://www.thetimes.com/uk/scotland/article/butterflies-flee-to-scotland-in-the-face-of-climate-change-mclnmsprv",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "entertainment",
+      title: "Rob Lowe Reflects on 'St. Elmo's Fire' Fame and Halloween Costumes",
+      date: "19 Jan 2025",
+      description: "Rob Lowe recalls the surreal experience of seeing people dressed as his 'St. Elmo's Fire' character for Halloween, marking the peak of his career during the Brat Pack era. He hints at the potential for a 'St. Elmo's Fire' sequel, although it is in the very early stages of development.",
+      image: "./assets/images/rob.jpg",
+      link: "https://people.com/rob-lowe-recalls-surreal-experience-inspired-halloween-costumes-in-80s-exclusive-8727679",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "politics",
+      title: "Priyanka Gandhi Vadra to Contest Indian Parliamentary Election",
+      date: "19 Jan 2025",
+      description: "Priyanka Gandhi Vadra, a member of India's influential Nehru-Gandhi family, has filed her nomination to contest the upcoming parliamentary elections from the Wayanad constituency in Kerala. This marks her formal entry into electoral politics.",
+      image: "./assets/images/gandhi.webp",
+      link: "https://www.thehindu.com/news/national/profile-of-priyanka-gandhi-vadra-contesting-from-wayanad-lok-sabha-constituency/article68783333.ece",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "culture",
+      title: "Indian American Dhol Band to Perform at Trump's Inauguration Parade",
+      date: "19 Jan 2025",
+      description: "An Indian American Dhol band from Texas will perform at Donald Trump's inauguration parade, showcasing India's musical traditions to a global audience. This performance highlights the growing recognition of Indian culture and the strong cultural ties between the US and India.",
+      image: "./assets/images/parade.webp",
+      link: "https://www.hindustantimes.com/world-news/us-news/indian-american-dhol-band-to-participate-in-donald-trump-inauguration-parade-101736249901947.html",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "fashion",
+      title: "Independent Brand Simon Cracker Denounces Luxury Fashion System with Upcycled Parodies",
+      date: "19 Jan 2025",
+      description: "Italian brand Simon Cracker showcased an upcycled collection at Milan Fashion Week, parodying luxury items like Hermes' Birkin bag to critique the industry's disconnect from quality and creativity.",
+      image: "./assets/images/fast.jpeg",
+      link: "https://apnews.com/article/italy-fashion-upcycled-simon-cracker-fa39e78120aee6318e819b0aa8397c51",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "sports",
+      title: "The 2024 Summer Olympics: What to Expect in Paris",
+      date: "19 Jan 2025",
+      description: "The 2024 Paris Summer Olympics are set to showcase a wide array of exciting sports, including the return of surfing, skateboarding, and breakdancing. Paris promises to deliver a unique and thrilling experience for fans worldwide.",
+      image: "./assets/images/oly.jpg",
+      link: "https://olympics.com/en/paris-2024/the-games/olympic-paralympic-games/olympic-games",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "nature",
+      title: "Butterflies Flee to Scotland in the Face of Climate Change",
+      date: "19 Jan 2025",
+      description: "Over the past 40 years, climate change has driven ten new butterfly species to Scotland, traditionally found in England and Wales. This shift highlights the impact of climate change on species distribution.",
+      image: "./assets/images/butt.jpg",
+      link: "https://www.thetimes.com/uk/scotland/article/butterflies-flee-to-scotland-in-the-face-of-climate-change-mclnmsprv",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "entertainment",
+      title: "Rob Lowe Reflects on 'St. Elmo's Fire' Fame and Halloween Costumes",
+      date: "19 Jan 2025",
+      description: "Rob Lowe recalls the surreal experience of seeing people dressed as his 'St. Elmo's Fire' character for Halloween, marking the peak of his career during the Brat Pack era. He hints at the potential for a 'St. Elmo's Fire' sequel, although it is in the very early stages of development.",
+      image: "./assets/images/rob.jpg",
+      link: "https://people.com/rob-lowe-recalls-surreal-experience-inspired-halloween-costumes-in-80s-exclusive-8727679",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "politics",
+      title: "Priyanka Gandhi Vadra to Contest Indian Parliamentary Election",
+      date: "19 Jan 2025",
+      description: "Priyanka Gandhi Vadra, a member of India's influential Nehru-Gandhi family, has filed her nomination to contest the upcoming parliamentary elections from the Wayanad constituency in Kerala. This marks her formal entry into electoral politics.",
+      image: "./assets/images/gandhi.webp",
+      link: "https://www.thehindu.com/news/national/profile-of-priyanka-gandhi-vadra-contesting-from-wayanad-lok-sabha-constituency/article68783333.ece",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "culture",
+      title: "Indian American Dhol Band to Perform at Trump's Inauguration Parade",
+      date: "19 Jan 2025",
+      description: "An Indian American Dhol band from Texas will perform at Donald Trump's inauguration parade, showcasing India's musical traditions to a global audience. This performance highlights the growing recognition of Indian culture and the strong cultural ties between the US and India.",
+      image: "./assets/images/parade.webp",
+      link: "https://www.hindustantimes.com/world-news/us-news/indian-american-dhol-band-to-participate-in-donald-trump-inauguration-parade-101736249901947.html",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "movies",
+      title: "Emergency: Kangana Ranaut's Political Drama Hits the Big Screen",
+      date: "19 Jan 2024",
+      description: "Directed by Kangana Ranaut, 'Emergency' is a political drama focusing on the 1975 Emergency period in India. The film showcases a gripping narrative and stellar performances.",
+      image: "./assets/images/emergrncy.jpeg",
+      link: "https://economictimes.indiatimes.com/magazines/panache/emergency-box-office-day-3-kangana-ranauts-political-drama-collects-over-rs-10-crore-beats-azaad-game-changer/articleshow/117385541.cms?from=mdr",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "music",
+      title: "Manchester Camerata/Pioro Review: Thrilling New Twist on The Four Seasons",
+      date: "1 Jan 2025",
+      description: "Violinist Daniel Pioro, in collaboration with the Manchester Camerata, presented a dynamic interpretation of Vivaldi's 'The Four Seasons,' enhanced by new poems penned by Michael Morpurgo and read by Stephen Fry. The performance was described as thrilling and imaginative, blending baroque and folk styles.",
+      image: "./assets/images/mancam.png",
+      link: "https://www.thetimes.com/culture/classical-opera/article/manchester-cameratapioro-review-thrilling-new-twist-on-the-four-seasons-nvkj0n8gd#:~:text=Pioro%20takes%20many%20liberties%2C%20from,and%20pure%20intonation%2C%20not%20indulgence.",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "nature",
+      title: "Slight Progress in Global Biodiversity Protection Efforts but Some Species Decline, New Reports Find",
+      date: "10 Jan 2025",
+      description: "Recent reports indicate moderate progress in global biodiversity protection, with 17.6% of land and inland waters and 8.4% of oceans and coastal areas now protected. However, 38% of the world's trees are at risk of extinction, underscoring the need for accelerated conservation efforts.",
+      image: "./assets/images/slight.avif",
+      link: "https://www.business-standard.com/world-news/slight-progress-in-biodiversity-protection-but-some-species-decline-report-124102801183_1.html",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "science",
+      title: "The Mind-Bending New Science of Measuring Time",
+      date: "11 Jan 2025",
+      description: "The definition of time has evolved significantly with scientific advancements, moving from celestial observations to atomic precision. Researchers at the National Institute of Standards and Technology (NIST) are at the forefront of timekeeping, maintaining highly accurate atomic clocks and considering redefining the second based on optical clocks for even finer measurements.",
+      image: "./assets/images/mind.avif",
+      link: "https://www.ft.com/content/625d2043-a5a4-4d6d-bbe9-42e524a211dd",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "lifestyle",
+      title: "What Dry January can do for the ‘sober curious’",
+      date: "12 Jan 2025",
+      description: "Scott Strode, founder of sober-active community The Phoenix, shares his journey to sobriety and how it led to a more active lifestyle. He discusses the benefits of participating in Dry January and how it can help individuals explore a sober lifestyle.",
+      image: "./assets/images/dry.jpeg",
+      link: "https://www.usatoday.com/story/money/food/2025/01/01/dry-january-alcohol-abstinence-mocktail-health/77202754007/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  },
+  {
+      category: "entertainment",
+      title: "Chris Hemsworth in Talks to Play Prince Charming in Upcoming Disney Live-Action Film",
+      date: "13 Jan 2025",
+      description: "Actor Chris Hemsworth is reportedly in discussions to portray Prince Charming in a new Disney live-action movie directed by Paul King. The film's plot details have not been disclosed, but it is said not to be linked to Cinderella.",
+      image: "./assets/images/Chris-Hemsworth.webp",
+      link: "https://variety.com/2024/film/news/chris-hemsworth-prince-charming-disney-paul-king-1236187996/",
+      profileImage: "./assets/images/tom.jpg",
+      profileName: "Tanmoy",
+      profileLink: "https://tanmoy215.github.io/my_profile/"
+  }  
+
+];
+
+// Function to create post-box elements
+function createPosts() {
+  const container = document.querySelector('.post.container'); // Select the container to append posts
+
+  posts.forEach(post => {
+      const postBox = document.createElement('div');
+      postBox.classList.add('post-box', post.category);
+      postBox.setAttribute('data-link', post.link);
+
+      postBox.innerHTML = `
+          <img src="${post.image}" alt="" class="post-img">
+          <h2 class="category">#${post.category}</h2>
+          <a href="${post.link}" target="_blank" class="post-title">${post.title}</a>
+          <span class="post-date">${post.date}</span>
+          <p class="post-description">${post.description}</p>
+          <div class="profile" data-link="${post.profileLink}">
+              <img src="${post.profileImage}" alt="" class="profile-img">
+              <span class="profile-name">${post.profileName}</span>
+          </div>
+      `;
+
+      container.appendChild(postBox);
+  });
+}
+
+// Call the function to render posts
+createPosts();
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -141,6 +662,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+// Trending section
+
 
 
   
