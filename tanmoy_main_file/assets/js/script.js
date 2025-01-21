@@ -1,6 +1,4 @@
 
-// 'use strict';
-
 // Navbar variables
 const nav = document.querySelector('.mobile-nav');
 const navMenuBtn = document.querySelector('.nav-menu-btn');
@@ -58,7 +56,7 @@ window.onload = function () {
       loader.style.display = "none"; // Completely hide loader
       loginPage.style.display = "grid"; // Show login page
     }, 700); // Wait for fade-out transition
-  }, 2900); // 4 seconds loader display
+  }, 2800); // 4 seconds loader display
 };
 
 
