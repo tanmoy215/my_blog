@@ -168,6 +168,105 @@ document.addEventListener("DOMContentLoaded", () => {
 // Array of post objects
 const posts = [
   {
+    category: "nature",
+    title: "India's Record-Breaking Heat in 2024",
+    date: "21 Jan 2025",
+    description: "India experienced its hottest year since 1901, with the average minimum temperature 0.90°C above the long-term average. The Indian Meteorological Department (IMD) reported that the annual average land surface air temperature was 0.65°C higher than the 1991-2020 average, raising concerns about climate change and its impact on agriculture and daily life.",
+    image: "./assets/images/heat.WEBP",
+    link: "https://hindi.moneycontrol.com/news/india/2024-to-be-hottest-year-in-india-since-1901-most-parts-likely-to-remain-hot-in-january-imd-1947829.html?utm_source=chatgpt.com",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "science",
+    title: "India's Push for Electric Vehicles Faces Challenges",
+    date: "21 Jan 2025",
+    description: "Despite efforts to promote electric vehicles (EVs), EVs currently hold just a 2% market share in India. Challenges such as inadequate battery life, insufficient charging infrastructure, and theft-prone chargers deter potential buyers, emphasizing the need for more comprehensive infrastructure development.",
+    image: "./assets/images/ev.gif",
+    link: "https://pune.news/auto/sealion-7-debuts-at-bharat-mobility-expo-byd-expands-india-ev-lineup-292623/",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "tech",
+    title: "India's Space Ambitions: 'India Space Station' by 2035",
+    date: "21 Jan 2025",
+    description: "India has announced plans to establish the 'India Space Station' by 2035 and aims to land an Indian astronaut on the Moon by 2040. This ambitious initiative underscores India's growing capabilities in space exploration.",
+    image: "./assets/images/space.webp",
+    link: "https://economictimes.indiatimes.com/news/science/by-2035-india-will-set-up-its-own-space-station-and-set-foot-on-moon-by-2040-union-minister-jitendra-singh/articleshow/116203833.cms?from=mdr",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "finance",
+    title: "PM Modi to Inaugurate Jewar Airport in April 2025",
+    date: "21 Jan 2025",
+    description: "Prime Minister Narendra Modi is scheduled to inaugurate the Jewar Airport in Uttar Pradesh in April 2025. The airport is expected to bring unprecedented prosperity to the region, enhancing connectivity and boosting economic growth.",
+    image: "./assets/images/jewar.avif",
+    link: "https://www.businesstoday.in/india/story/pm-modi-to-inaugurate-noida-international-airport-in-jewar-in-april-2025-458130-2024-12-21",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "news",
+    title: "Former Army Chief V K Singh Sworn in as Mizoram Governor",
+    date: "16 Jan 2025",
+    description: "Former Army Chief General V K Singh was sworn in as the 25th Governor of Mizoram on January 16, 2025. His appointment is anticipated to bring valuable experience to the state's governance.",
+    image: "./assets/images/vk_singh.avif",
+    link: "https://www.newindianexpress.com/nation/2025/Jan/16/former-army-chief-vk-singh-sworn-in-as-mizoram-governor",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "politics",
+    title: "Odisha Government to Provide Pension to Emergency Period Detainees",
+    date: "21 Jan 2025",
+    description: "The Odisha government announced a monthly pension of ₹20,000 for individuals who were imprisoned during the Emergency period (1975-1977). This initiative aims to honor their sacrifices and contributions to democracy.",
+    image: "./assets/images/odisha.webp",
+    link: "https://indianexpress.com/article/india/odisha-mohan-charan-majhi-pension-emergency-detainees-9776599/",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "tech",
+    title: "ISRO's Successful Space Docking Experiment",
+    date: "21 Jan 2025",
+    description: "ISRO successfully executed the Space Docking Experiment (SpaDeX), marking India's entry into the elite club of nations capable of autonomous docking in space. This achievement enhances India's capabilities in space missions and satellite servicing.",
+    image: "./assets/images/isro.webp",
+    link: "https://www.thehindu.com/sci-tech/science/isro-successfully-executes-spadex-docking-experiment-india-joins-elite-club-of-nations/article69103462.ece",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "tech",
+    title: "India Becomes 3rd Largest Smartphone Exporter",
+    date: "21 Jan 2025",
+    description: "India has emerged as the third-largest exporter of smartphones worldwide, with exports exceeding ₹20,000 crore in November 2024. This growth reflects India's expanding role in the global electronics manufacturing sector.",
+    image: "./assets/images/smart.jpeg",
+    link: "https://currentaffairs.adda247.com/india-emerges-as-3rd-largest-exporter-in-smartphone-market/",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "news",
+    title: "India Signs Multiple MoUs with Sri Lanka",
+    date: "16 Dec 2024",
+    description: "On December 16, 2024, India signed multiple Memoranda of Understanding (MoUs) with Sri Lanka in New Delhi to enhance cooperation across various sectors, including trade, tech, and cultural exchange. These agreements aim to strengthen bilateral ties and promote regional stability.",
+    image: "./assets/images/sri.jpg",
+    link: "https://ddnews.gov.in/en/india-and-sri-lanka-sign-key-mous-to-strengthen-bilateral-ties/#:~:text=India%20and%20Sri%20Lanka%20signed,day%20state%20visit%20to%20India.",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
       category: "food",
       title: "Centre for Indian Cuisine and Food Culture Inaugurated",
       date: "15 Jan 2025",
@@ -176,7 +275,7 @@ const posts = [
       link: "https://www.thehindu.com/news/cities/Mangalore/centre-for-indian-cuisine-and-food-culture-inaugurated/article67376062.ece",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "health",
@@ -187,7 +286,7 @@ const posts = [
       link: "https://time.com/4856954/can-money-buy-you-happiness/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "news",
@@ -198,7 +297,7 @@ const posts = [
       link: "https://www.npr.org/2024/10/30/g-s1-30873/china-launches-new-crew-to-its-space-station-as-it-seeks-to-expand-exploration",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "sports",
@@ -209,7 +308,7 @@ const posts = [
       link: "https://olympics.com/en/news/simone-biles-all-titles-records-medals-complete-list",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "news",
@@ -220,7 +319,7 @@ const posts = [
       link: "https://www.bbc.com/news/world-australia-65606208",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "fashion",
@@ -231,7 +330,7 @@ const posts = [
       link: "https://apnews.com/article/milan-fashion-week-prada-miuccia-raf-simons-709d6cc22235940f525cc0692fbb5bac#:~:text=Men%20were%20invited%20to%20wear,tops%20or%20slightly%20ratty%20sweaters.",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "travel",
@@ -242,7 +341,7 @@ const posts = [
       link: "https://www.hindustantimes.com/lifestyle/travel/selfish-seat-squatters-travel-trend-stirs-up-flight-drama-redditors-share-their-most-awkward-encounters-101734329003782.html",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "food",
@@ -253,7 +352,7 @@ const posts = [
       link: "",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "health",
@@ -264,7 +363,7 @@ const posts = [
       link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9388078/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "education",
@@ -275,7 +374,7 @@ const posts = [
       link: "https://www.reuters.com/world/asia-pacific/china-unveils-2024-2035-plan-build-strong-education-nation-2025-01-19/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "science",
@@ -286,7 +385,7 @@ const posts = [
   link: "https://www.cbsnews.com/news/nasa-parker-solar-probe-closest-ever-approach-sun/#:~:text=A%20NASA%20spacecraft%20made%20history,miles%20of%20the%20sun's%20surface.",
   profileImage: "./assets/images/tom.jpg",
   profileName: "Tanmoy",
-  profileLink: "https://tanmoy215.github.io/my_profile/"
+  profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "lifestyle",
@@ -297,7 +396,7 @@ const posts = [
       link: "https://www.thesun.co.uk/fabulous/31110047/brits-more-italian-slower-more-relaxed-lifestyle-research/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "finance",
@@ -305,10 +404,10 @@ const posts = [
       date: "19 Jan 2025",
       description: "Former President Donald Trump's newly launched cryptocurrency token has experienced a significant surge in value as his inauguration approaches, attracting attention from investors and the media.",
       image: "./assets/images/trump.avif",
-      link: "https://www.thehindu.com/sci-tech/technology/trump-promotes-new-meme-coin-before-taking-office-on-pro-crypto-agenda/article69118222.ece",
+      link: "https://www.thehindu.com/sci-tech/tech/trump-promotes-new-meme-coin-before-taking-office-on-pro-crypto-agenda/article69118222.ece",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "travel",
@@ -319,7 +418,7 @@ const posts = [
       link: "https://www.euronews.com/my-europe/2024/10/10/eu-delays-again-its-new-entryexit-system-for-short-stay-travellers2",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "fashion",
@@ -330,7 +429,7 @@ const posts = [
       link: "https://www.vogue.com/article/troye-sivan-prada-milan-fashion-week-librarian-chic",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "sports",
@@ -341,7 +440,7 @@ const posts = [
       link: "https://brandequity.economictimes.indiatimes.com/news/research/govt-should-leverage-sports-industry-for-economic-growth-report/115930284#:~:text=%22The%20Indian%20government%20should%20focus,of%20Sports%20in%20India%20report.",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "education",
@@ -352,7 +451,7 @@ const posts = [
       link: "https://www.lbc.co.uk/news/nearly-a-third-of-pupils-receiving-extra-exam-time/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "travel",
@@ -363,7 +462,7 @@ const posts = [
       link: "https://mpora.com/multi-sport/adventure-holidays-best-kind-family-fun-can/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   }, 
       {
       category: "fashion",
@@ -374,29 +473,7 @@ const posts = [
       link: "https://apnews.com/article/italy-fashion-upcycled-simon-cracker-fa39e78120aee6318e819b0aa8397c51",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "sports",
-      title: "The 2024 Summer Olympics: What to Expect in Paris",
-      date: "19 Jan 2025",
-      description: "The 2024 Paris Summer Olympics are set to showcase a wide array of exciting sports, including the return of surfing, skateboarding, and breakdancing. Paris promises to deliver a unique and thrilling experience for fans worldwide.",
-      image: "./assets/images/oly.jpg",
-      link: "https://olympics.com/en/paris-2024/the-games/olympic-paralympic-games/olympic-games",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "nature",
-      title: "Butterflies Flee to Scotland in the Face of Climate Change",
-      date: "19 Jan 2025",
-      description: "Over the past 40 years, climate change has driven ten new butterfly species to Scotland, traditionally found in England and Wales. This shift highlights the impact of climate change on species distribution.",
-      image: "./assets/images/butt.jpg",
-      link: "https://www.thetimes.com/uk/scotland/article/butterflies-flee-to-scotland-in-the-face-of-climate-change-mclnmsprv",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "entertainment",
@@ -407,40 +484,7 @@ const posts = [
       link: "https://people.com/rob-lowe-recalls-surreal-experience-inspired-halloween-costumes-in-80s-exclusive-8727679",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "politics",
-      title: "Priyanka Gandhi Vadra to Contest Indian Parliamentary Election",
-      date: "19 Jan 2025",
-      description: "Priyanka Gandhi Vadra, a member of India's influential Nehru-Gandhi family, has filed her nomination to contest the upcoming parliamentary elections from the Wayanad constituency in Kerala. This marks her formal entry into electoral politics.",
-      image: "./assets/images/gandhi.webp",
-      link: "https://www.thehindu.com/news/national/profile-of-priyanka-gandhi-vadra-contesting-from-wayanad-lok-sabha-constituency/article68783333.ece",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "culture",
-      title: "Indian American Dhol Band to Perform at Trump's Inauguration Parade",
-      date: "19 Jan 2025",
-      description: "An Indian American Dhol band from Texas will perform at Donald Trump's inauguration parade, showcasing India's musical traditions to a global audience. This performance highlights the growing recognition of Indian culture and the strong cultural ties between the US and India.",
-      image: "./assets/images/parade.webp",
-      link: "https://www.hindustantimes.com/world-news/us-news/indian-american-dhol-band-to-participate-in-donald-trump-inauguration-parade-101736249901947.html",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "fashion",
-      title: "Independent Brand Simon Cracker Denounces Luxury Fashion System with Upcycled Parodies",
-      date: "19 Jan 2025",
-      description: "Italian brand Simon Cracker showcased an upcycled collection at Milan Fashion Week, parodying luxury items like Hermes' Birkin bag to critique the industry's disconnect from quality and creativity.",
-      image: "./assets/images/fast.jpeg",
-      link: "https://apnews.com/article/italy-fashion-upcycled-simon-cracker-fa39e78120aee6318e819b0aa8397c51",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "sports",
@@ -451,7 +495,7 @@ const posts = [
       link: "https://olympics.com/en/paris-2024/the-games/olympic-paralympic-games/olympic-games",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "nature",
@@ -462,18 +506,7 @@ const posts = [
       link: "https://www.thetimes.com/uk/scotland/article/butterflies-flee-to-scotland-in-the-face-of-climate-change-mclnmsprv",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  },
-  {
-      category: "entertainment",
-      title: "Rob Lowe Reflects on 'St. Elmo's Fire' Fame and Halloween Costumes",
-      date: "19 Jan 2025",
-      description: "Rob Lowe recalls the surreal experience of seeing people dressed as his 'St. Elmo's Fire' character for Halloween, marking the peak of his career during the Brat Pack era. He hints at the potential for a 'St. Elmo's Fire' sequel, although it is in the very early stages of development.",
-      image: "./assets/images/rob.jpg",
-      link: "https://people.com/rob-lowe-recalls-surreal-experience-inspired-halloween-costumes-in-80s-exclusive-8727679",
-      profileImage: "./assets/images/tom.jpg",
-      profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "politics",
@@ -484,7 +517,7 @@ const posts = [
       link: "https://www.thehindu.com/news/national/profile-of-priyanka-gandhi-vadra-contesting-from-wayanad-lok-sabha-constituency/article68783333.ece",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "culture",
@@ -495,7 +528,7 @@ const posts = [
       link: "https://www.hindustantimes.com/world-news/us-news/indian-american-dhol-band-to-participate-in-donald-trump-inauguration-parade-101736249901947.html",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "movies",
@@ -506,7 +539,7 @@ const posts = [
       link: "https://economictimes.indiatimes.com/magazines/panache/emergency-box-office-day-3-kangana-ranauts-political-drama-collects-over-rs-10-crore-beats-azaad-game-changer/articleshow/117385541.cms?from=mdr",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "music",
@@ -517,7 +550,7 @@ const posts = [
       link: "https://www.thetimes.com/culture/classical-opera/article/manchester-cameratapioro-review-thrilling-new-twist-on-the-four-seasons-nvkj0n8gd#:~:text=Pioro%20takes%20many%20liberties%2C%20from,and%20pure%20intonation%2C%20not%20indulgence.",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "nature",
@@ -528,18 +561,18 @@ const posts = [
       link: "https://www.business-standard.com/world-news/slight-progress-in-biodiversity-protection-but-some-species-decline-report-124102801183_1.html",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "science",
       title: "The Mind-Bending New Science of Measuring Time",
       date: "11 Jan 2025",
-      description: "The definition of time has evolved significantly with scientific advancements, moving from celestial observations to atomic precision. Researchers at the National Institute of Standards and Technology (NIST) are at the forefront of timekeeping, maintaining highly accurate atomic clocks and considering redefining the second based on optical clocks for even finer measurements.",
+      description: "The definition of time has evolved significantly with scientific advancements, moving from celestial observations to atomic precision. Researchers at the National Institute of Standards and tech (NIST) are at the forefront of timekeeping, maintaining highly accurate atomic clocks and considering redefining the second based on optical clocks for even finer measurements.",
       image: "./assets/images/mind.avif",
       link: "https://www.ft.com/content/625d2043-a5a4-4d6d-bbe9-42e524a211dd",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "lifestyle",
@@ -550,7 +583,7 @@ const posts = [
       link: "https://www.usatoday.com/story/money/food/2025/01/01/dry-january-alcohol-abstinence-mocktail-health/77202754007/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   {
       category: "entertainment",
@@ -561,8 +594,32 @@ const posts = [
       link: "https://variety.com/2024/film/news/chris-hemsworth-prince-charming-disney-paul-king-1236187996/",
       profileImage: "./assets/images/tom.jpg",
       profileName: "Tanmoy",
-      profileLink: "https://tanmoy215.github.io/my_profile/"
-  }  
+      profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  {
+    category: "sports",
+    title: "India’s Historic Victory in the 2023 ICC Cricket World Cup",
+    date: "19 Jan 2025",
+    description: "India's cricket team clinched the 2023 ICC Cricket World Cup, defeating Australia in a thrilling final. This victory marks India's third World Cup win, cementing their place in cricket history.",
+    image: "./assets/images/india_win.jpg",
+    link: "https://news.abplive.com/sports/cricket/india-commenced-their-historic-icc-cricket-world-cup-2023-campaign-on-this-day-1-year-ago-vs-australia-chennai-kolhi-rohit-kl-rahul-hardik-pandya-chepauk-1722979",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Ravi",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  },
+  
+  {
+    category: "tech",
+    title: "India Ranked Second in QS World Future Skills Index 2025",
+    date: "21 Jan 2025",
+    description: "India has been ranked second, after the United States, in the QS World Future Skills Index 2025, highlighting its readiness in areas like artificial intelligence, digital, and green skills. This ranking underscores India's commitment to developing a skilled workforce for the future.",
+    image: "./assets/images/future.WEBP",
+    link: "https://indianexpress.com/article/explained/explained-economics/qs-ranking-india-say-jobs-skills-9784091/#:~:text=India%20Future%20Job%20Market%3A%20India,World%20Future%20Skills%20Index%202025.",
+    profileImage: "./assets/images/tom.jpg",
+    profileName: "Tanmoy",
+    profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
+  }
+  
 
 ];
 
