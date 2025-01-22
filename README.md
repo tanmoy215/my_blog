@@ -1,5 +1,6 @@
 # DevBlog 📝  
-![DevBlog Banner](assets/images/devblog-banner.png)  
+![DevBlog Banner](./tanmoy_main_file/assets/images/page1.jpg)
+![DevBlog Banner](./tanmoy_main_file/assets/images/page2.jpg)
 *Modern blogging redefined.*
 
 Welcome to **DevBlog**, a modern and dynamic blogging platform that lets users share their ideas, experiences, and knowledge seamlessly. Built with a focus on responsiveness and user experience, DevBlog is designed for developers and writers alike.
