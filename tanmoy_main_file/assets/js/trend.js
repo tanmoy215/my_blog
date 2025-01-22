@@ -4,7 +4,7 @@
 
 
 
-//top news section
+//  ===== Top News =====
 
 
 const topNewsData = [
@@ -159,13 +159,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//thired section 
-
-//post-box
+//  ===== Thired Section =====
 
 
+//  ===== ALL POST =====
 
-// Array of post objects
+
+// ---------------Array of post objects--------------------------------
 const posts = [
   {
     category: "nature",
@@ -604,7 +604,7 @@ const posts = [
     image: "./assets/images/india_win.jpg",
     link: "https://news.abplive.com/sports/cricket/india-commenced-their-historic-icc-cricket-world-cup-2023-campaign-on-this-day-1-year-ago-vs-australia-chennai-kolhi-rohit-kl-rahul-hardik-pandya-chepauk-1722979",
     profileImage: "./assets/images/tom.jpg",
-    profileName: "Ravi",
+    profileName: "Tanmoy",
     profileLink: "https://www.linkedin.com/in/tanmoy-majee-empty/"
   },
   
@@ -725,12 +725,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+//  ===== Filter Items =====
 
 
 
-// Trending section
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const filterItems = document.querySelectorAll(".filter-item");
+  const postBoxes = document.querySelectorAll(".post-box");
+
+  // Helper function for smooth display
+  function smoothDisplay(element, displayStyle) {
+    if (displayStyle === "block") {
+      element.style.opacity = 0; // Start transparent
+      element.style.display = displayStyle;
+      setTimeout(() => {
+        element.style.transition = "opacity 0.5s ease"; // Smooth transition
+        element.style.opacity = 1; // Fade in
+      }, 10);
+    } else {
+      element.style.transition = "opacity 0.5s ease"; // Smooth transition
+      element.style.opacity = 0; // Fade out
+      setTimeout(() => {
+        element.style.display = displayStyle; // Set to "none" after fade-out
+      }, 500);
+    }
+  }
+
+  filterItems.forEach(function (filterItem) {
+    filterItem.addEventListener("click", function () {
+      const value = filterItem.getAttribute("data-filter");
+
+      postBoxes.forEach(function (postBox) {
+        if (value === "all" || postBox.classList.contains(value)) {
+          smoothDisplay(postBox, "block");
+        } else {
+          smoothDisplay(postBox, "none");
+        }
+      });
+
+      // Update active filter
+      filterItems.forEach(function (item) {
+        item.classList.remove("active-filter");
+      });
+      filterItem.classList.add("active-filter");
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  ===== Trending Section =====
 
   
   let nums = ['./assets/images/trend1.jpg','./assets/images/trend2.webp','./assets/images/trend3.avif',"./assets/images/trend4.webp","./assets/images/trend5.jpeg","./assets/images/trend6.avif","./assets/images/trend7.jpg","./assets/images/trend8.jpg","./assets/images/trend9.jpg","./assets/images/trend10.webp","./assets/images/trend11.jpg","./assets/images/trend12.webp","./assets/images/trend13.webp","./assets/images/trend14.webp","./assets/images/trend15.jpg","./assets/images/trend16.png","./assets/images/trend17.webp","./assets/images/trend18.webp","./assets/images/trend19.jpeg","./assets/images/trend20.webp"];

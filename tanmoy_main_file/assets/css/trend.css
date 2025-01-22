@@ -44,10 +44,10 @@ body {
     color: transparent; /* Make text invisible */
     background-image: linear-gradient(
         to top,
-        #FF4500, /* Flame orange */
-        #FF6347, /* Tomato red */
-        #FFD700, /* Golden yellow */
-        #FF4500 /* Flame orange */
+        #FF4500, 
+        #FF6347, 
+        #FFD700, 
+        #FF4500 
     );
     background-clip: text; /* Visible gradient on text only */
     -webkit-background-clip: text;

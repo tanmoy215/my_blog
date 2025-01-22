@@ -1,37 +1,7 @@
-// Purpose: To handle the client-side JavaScript for the blog application
-
-document.getElementById("post-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const alertBox = document.getElementById("alert-box");
-  const overlay = document.getElementById("overlay");
-
-  // Set the content of the alert box
-  alertBox.innerHTML = `
-      <span class="checkmark">✔</span> <br>
-      Thank You for Contributing! <br> It will be posted after verification by the Blog Administrator.
-  `;
-
-  // Show the overlay and alert box
-  overlay.style.display = "block";
-  alertBox.style.display = "block";
-  alertBox.style.opacity = 1;
-
-  // Hide the alert box and overlay after 4 seconds
-  setTimeout(() => {
-      alertBox.style.opacity = 0; // Fade out the alert box
-      overlay.style.display = "none"; // Hide the overlay
-      setTimeout(() => {
-          alertBox.style.display = "none"; // Hide the alert box completely
-          location.reload();  // Refresh the page
-      }, 300);  // Wait for fade-out to complete
-  }, 4000);  // 4 seconds delay
-});
 
 
 
-
-
+// ===== Post Form Image Preview =====
 
 
 document.getElementById("image").addEventListener("change", function (e) {
@@ -61,7 +31,7 @@ document.getElementById("image").addEventListener("change", function (e) {
 
 
 
-
+// ===== Edit =====
 
 
 
@@ -147,3 +117,44 @@ document.getElementById("edit-description").addEventListener("click", () => {
       descriptionBox.style.minHeight = "40px"; // Restore original height
   }
 });
+
+
+
+
+
+
+
+
+
+
+// ===== Alert After Submit the post  =====
+
+
+document.getElementById("post-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const alertBox = document.getElementById("alert-box");
+  const overlay = document.getElementById("overlay");
+
+  // Set the content of the alert box
+  alertBox.innerHTML = `
+      <span class="checkmark">✔</span> <br>
+      Thank You for Contributing! <br> It will be posted after verification by the Blog Administrator.
+  `;
+
+  // Show the overlay and alert box
+  overlay.style.display = "block";
+  alertBox.style.display = "block";
+  alertBox.style.opacity = 1;
+
+  // Hide the alert box and overlay after 4 seconds
+  setTimeout(() => {
+      alertBox.style.opacity = 0; // Fade out the alert box
+      overlay.style.display = "none"; // Hide the overlay
+      setTimeout(() => {
+          alertBox.style.display = "none"; // Hide the alert box completely
+          location.reload();  // Refresh the page
+      }, 300);  // Wait for fade-out to complete
+  }, 4000);  // 4 seconds delay
+});
+
