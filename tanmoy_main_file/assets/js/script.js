@@ -45,9 +45,9 @@ const header = document.getElementById('headert'); // Header section
 
 const updateHeaderBg = function () {
   if (document.body.classList.contains('light-theme')) {
-    header.style.backgroundColor = '#edf2f7'; // Light mode color
+    header.style.backgroundColor = '#4169E1'; // Light mode color
   } else {
-    header.style.backgroundColor = '#0f172a'; // Dark mode color
+    header.style.backgroundColor = '#4169E1'; // Dark mode color
   }
 };
 

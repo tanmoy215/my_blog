@@ -240,14 +240,14 @@
 @media (max-width: 768px) {
     .post-filter {
         gap: 1rem; /* Smaller gap for better fit on tablets */
-        padding: 0.3rem; /* Compact padding */
+        /* padding: 0.3rem;  */
     }
 }
 
 @media (max-width: 480px) {
     .post-filter {
         gap: 0.5rem; /* Further reduced gap for smaller screens */
-        font-size: 0.85rem; /* Adjusted font size for better fit */
+        /* font-size: 0.85rem; */
     }
 }
 

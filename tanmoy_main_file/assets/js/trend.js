@@ -856,3 +856,135 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   
+
+
+
+
+
+
+  //  ===== Iconic Person =====
+
+
+
+
+
+
+
+  // Data structure for cards
+const cards = [
+  {
+    imageSrc: './assets/images/ratan_tata.png',
+    alt: 'Ratan Tata',
+    name: 'Ratan Tata',
+    lifespan: '(1937–2024)',
+    description: 'Ratan Tata, former chairman of Tata Group, passed away in October 2024, leaving behind a legacy of global business success and ethical leadership. His philanthropic efforts in education, healthcare, and rural development continue to inspire.'
+  },
+  {
+    imageSrc: './assets/images/lata_mangeskhar.png',
+    alt: 'Lata Mangeshkar',
+    name: 'Lata Mangeshkar',
+    lifespan: '(1929–2022)',
+    description: 'Lata Mangeshkar, the legendary playback singer, passed away in February 2022. Known as the "Nightingale of India," her voice enchanted generations, with thousands of timeless songs across Indian cinema. Her contribution to music and culture made her an iconic figure in India and beyond.'
+  },
+  {
+    imageSrc: './assets/images/pandit_birju_maharaj.png',
+    alt: 'Pandit Birju Maharaj',
+    name: 'Pandit Birju Maharaj',
+    lifespan: '(1938–2022)',
+    description: 'Pandit Birju Maharaj, a celebrated Kathak dancer, passed away in January 2022. Renowned for his mastery and graceful storytelling through dance, he was a living legend in Indian classical dance. He passed on a legacy of artistry, education, and passion for Kathak.'
+  },
+  {
+    imageSrc: './assets/images/apj.png',
+    alt: 'Dr. APJ Abdul Kalam',
+    name: 'Dr. APJ Abdul Kalam ',
+    lifespan: '(1931–2015)',
+    description: `Dr. APJ Abdul Kalam, the 11th President of India, was a visionary scientist and an inspirational leader who made significant contributions to India's space and defense programs. He passed away in 2015, but his ideals of education, innovation, and patriotism continue to guide and inspire millions.`
+  }
+  ,
+  {
+    imageSrc: './assets/images/vangelis.png',
+    alt: 'Vangelis',
+    name: 'Vangelis',
+    lifespan: '(1943–2022)',
+    description: `Although not Indian, Vangelis passed in May 2022 and his work had significant influence in India. The composer of the iconic score for "Chariots of Fire" and "Blade Runner," Vangelis' music inspired many filmmakers and artists globally, including in Indian cinema.`
+  },
+  {
+    imageSrc: './assets/images/sidhu.png',
+    alt: 'Sidhu Moosewala',
+    name: 'Sidhu Moosewala',
+    lifespan: ' (1993–2022)',
+    description: 'Sidhu Moosewala, a Punjabi singer and politician, tragically passed away in May 2022. Known for his rebellious lyrics and deep connection with youth culture, his music became a symbol of social and political commentary. His untimely death left a lasting impact on the music industry and his fans worldwide.'
+  },
+  {
+    imageSrc: './assets/images/chuni.png',
+    alt: 'Chuni Goswami',
+    name: 'Chuni Goswami ',
+    lifespan: '(1938–2020)',
+    description: 'Chuni Goswami, a legendary footballer and cricketer, passed away in 2020. His sporting achievements in both cricket and football made him one of India’s greatest all-round athletes. He was a beloved figure in West Bengal and a respected sports personality in the country.'
+  },
+  {
+    imageSrc: './assets/images/banchendri.png',
+    alt: 'Bachendri Pal',
+    name: 'Bachendri Pal ',
+    lifespan: '(1954–2023)',
+    description: 'Bachendri Pal, an iconic mountaineer, passed away in 2023. She was the first Indian woman to summit Mount Everest and inspired countless individuals with her achievements in adventure sports. Pal’s passion for mountaineering and her leadership in the field of sports continue to be a source of inspiration.'
+  },
+  {
+    imageSrc: './assets/images/sushant.png',
+    alt: 'Sushant Singh Rajput',
+    name: 'Sushant Singh Rajput ',
+    lifespan: '(1986–2020)',
+    description: 'Sushant Singh Rajput was an actor known for his versatile roles in Bollywood, including his portrayal of cricketer MS Dhoni. His tragic death in 2020 brought attention to mental health issues in the film industry, and his legacy continues to inspire young talent.'
+  },
+  {
+    imageSrc: './assets/images/kurien.png',
+    alt: 'Dr. Verghese Kurien',
+    name: 'Dr. Verghese Kurien',
+    lifespan: '(1921–2012)',
+    description: `Dr. Verghese Kurien, the "Father of the White Revolution," played a key role in transforming India into the world’s largest milk producer. He founded the National Dairy Development Board (NDDB) and the Amul cooperative, which empowered millions of dairy farmers.`
+  },
+  {
+    imageSrc: './assets/images/kalpana.png',
+    alt: 'Kalpana Chawla',
+    name: 'Kalpana Chawla ',
+    lifespan: '(1961–2003)',
+    description: `Kalpana Chawla was the first woman of Indian origin in space. She made history as a NASA astronaut, and her untimely death in the Columbia space shuttle disaster in 2003 did not diminish her legacy. She continues to inspire future generations of scientists and space explorers.`
+  },
+  {
+    imageSrc: './assets/images/vikram.png',
+    alt: 'Vikram Sarabhai',
+    name: 'Vikram Sarabhai ',
+    lifespan: '(1919–1971)',
+    description: `Vikram Sarabhai is considered the father of the Indian space program. His leadership in establishing the Indian Space Research Organisation (ISRO) laid the foundation for India's advancements in space technology. He passed away in 1971, but his work continues to shape India's space exploration.`
+  }
+  // Add more cards as needed
+];
+
+// Function to generate the HTML for the cards dynamically
+function generateCards() {
+  const container = document.getElementById('card-container');
+  container.innerHTML = ''; // Clear the container before adding new cards
+
+  cards.forEach((card, index) => {
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('card');
+    cardElement.setAttribute('data-index', index); // Store the index for future modification
+
+    // Use backticks (``) for string interpolation
+    cardElement.innerHTML = `
+      <div class="imgBx">
+        <img src="${card.imageSrc}" alt="${card.alt}">
+      </div>
+      <div class="details">
+        <h2>${card.name} <br>${card.lifespan}</h2>
+        <p>${card.description}</p>
+      </div>
+    `;
+
+    // Append the card element to the container
+    container.appendChild(cardElement);
+  });
+}
+
+// Call the function to generate cards when the page loads
+generateCards();
