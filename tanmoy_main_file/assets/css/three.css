@@ -308,3 +308,40 @@
  
 
 
+
+
+
+
+
+
+
+
+.mobile-nav {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    max-height: 60%;
+    background: rgb(56, 70, 170); /* Black background */
+    color: var(--white); /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth entrance */
+    z-index: 9999;
+  }
+  
+  .mobile-nav.active {
+    transform: translateY(0); /* Brings the menu into view */
+    visibility: visible;
+    opacity: 1; /* Ensure full visibility */
+  }
+  
+  .post-filter {
+    transition: opacity 0.3s ease; /* Smooth opacity change */
+  }
+  

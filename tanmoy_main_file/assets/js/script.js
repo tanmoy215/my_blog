@@ -26,18 +26,55 @@ window.onload = function () {
 
 
 
-// Navbar variables
+
+
+
+// Select Elements
 const nav = document.querySelector('.mobile-nav');
 const navMenuBtn = document.querySelector('.nav-menu-btn');
 const navCloseBtn = document.querySelector('.nav-close-btn');
+const desktopNav = document.querySelector('.desktop-nav');
 
-// navToggle function
-const navToggleFunc = function () { 
-  nav.classList.toggle('active'); 
+const postFilter = document.querySelector('.post-filter');
+
+// Toggle Functionality for Mobile Nav
+const navToggleFunc = () => {
+  nav.classList.toggle('active');
+
+  if (nav.classList.contains('active')) {
+    desktopNav.style.display = 'none'; // Hide desktop navigation
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+
+    nav.style.zIndex = '1000';
+    postFilter.style.zIndex = '0';
+
+  } else {
+    desktopNav.style.display = ''; // Restore desktop navigation
+    document.body.style.overflow = ''; // Enable scrolling
+
+    nav.style.zIndex = '1000';
+    postFilter.style.zIndex = '0';
+
+  }
 };
 
+// Event Listeners
 navMenuBtn.addEventListener('click', navToggleFunc);
 navCloseBtn.addEventListener('click', navToggleFunc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Theme toggle variables
 const themeBtn = document.querySelectorAll('.theme-btn');
