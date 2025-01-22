@@ -913,7 +913,7 @@ const cards = [
     alt: 'Sidhu Moosewala',
     name: 'Sidhu Moosewala',
     lifespan: ' (1993–2022)',
-    description: 'Sidhu Moosewala, a Punjabi singer and politician, tragically passed away in May 2022. Known for his rebellious lyrics and deep connection with youth culture, his music became a symbol of social and political commentary. His untimely death left a lasting impact on the music industry and his fans worldwide.'
+    description: 'Sidhu Moosewala, a Punjabi singer and politician, tragically passed away in May 2022. Known for his rebellious lyrics and deep connection with youth culture, his music became a symbol of social and political commentary.'
   },
   {
     imageSrc: './assets/images/chuni.png',

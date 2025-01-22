@@ -354,6 +354,17 @@ gap: 15px;
 
 
 
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Default state for small screens */
+  }
+
+  .mobile-nav {
+    display: block; /* Ensure mobile-nav is available */
+  }
+}
+
+
 /* ===== HERO SECTION =====  */
 
 .hero {
@@ -678,12 +689,36 @@ header .flex-wrapper {
 
 
 
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none; /* Default state for small screens */
-  }
 
-  .mobile-nav {
-    display: block; /* Ensure mobile-nav is available */
+
+/* Hide desktop navigation on smaller screens */
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none; /* Hide the desktop navigation for smaller screens */
   }
 }
+
+/* Show mobile navigation and hide desktop navigation on smaller screens */
+@media (max-width: 1024px) {
+  .mobile-nav {
+    display: block; /* Show mobile nav on smaller screens */
+  }
+
+  .nav-menu-btn,
+  .nav-close-btn {
+    display: flex; /* Ensure buttons are visible */
+  }
+}
+
+/* ===== Mobile Navigation on Small Screens ===== */
+@media (max-width: 768px) {
+  .mobile-nav .nav-link {
+    font-size: 16px; /* Smaller font size for mobile nav links */
+  }
+}
+
+
+
+
+
+
