@@ -28,7 +28,7 @@ document.querySelector('#tom').addEventListener('click', function (event) {
     showAlert('Sign-up successful! Redirecting to login...', 'success');
     setTimeout(function() {
         window.location.href = './index.html';
-    }, 2000); // Delay of 2 seconds before redirect
+    },2000);
 });
 
 // Function to show the custom alert with dynamic background color
